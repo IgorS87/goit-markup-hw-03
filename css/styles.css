@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 :root {
   --primary-text-color: #212121;
   --accent-color: #2196f3;
@@ -12,13 +20,31 @@ body {
   color: var(--primary-text-color);
   letter-spacing: 0.03em;
 }
+h1,
+h2,
+h3,
+p,
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 a {
   text-decoration: none;
 }
+/* Container header */
+
+.container {
+  margin: 0 auto;
+
+  width: 1200px;
+
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
 /* Header logo */
+
 .logo {
   font-family: Raleway, sans-serif;
   color: #000;
@@ -47,11 +73,32 @@ a {
 :focus {
   color: var(--accent-color);
 }
-/* Navigation */
+/* Flex nav */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+.site-nav .item + .item,
+.contacts .item + .item {
+  display: flex;
+  margin-left: 50px;
+}
+
 .site-nav .link {
   color: var(--primary-text-color);
 }
-
+.contacts {
+  display: flex;
+  margin-right: 50px;
+}
 .contacts .link {
   color: var(--secondary-color);
 }
@@ -59,6 +106,10 @@ a {
 .site-nav .link,
 .contacts .link,
 .backlight {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -77,11 +128,18 @@ a {
   color: var(--accent-color);
 }
 /* Section*/
-.hero-section {
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+.heros {
   background: var(--br-fone);
   text-align: center;
 }
 .hero {
+  text-align: center;
+  /* margin-top: 0;*/
+  margin-bottom: 30px;
   color: var(--primary-white-color);
 
   letter-spacing: 0.06em;
@@ -133,8 +191,31 @@ a {
   font-size: 16px;
   line-height: 1.88;
 }
+
+/* flex container */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* flex feuters */
+
+.flex-item {
+  width: 270px;
+  margin-right: 30px;
+}
+.flex-item:nth-child(4n) {
+  margin: 0px;
+}
+.feutures-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /* features */
+
 .title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -148,44 +229,147 @@ a {
   font-size: 14px;
   line-height: 1.71;
 }
+/* Flex title */
+
+.flex-img {
+  /* width: calc((100%-60px) / 3); */
+
+  width: 370px;
+  margin-right: 30px;
+}
+.flex-img:nth-child(3n) {
+  margin: 0px;
+}
+.flex-img:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+.title-list {
+  display: flex;
+
+  /* flex-wrap: wrap; */
+}
+/* Title */
 .section-title {
+  margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
 }
+/* Flex team */
+
+.flex-spec {
+  width: 270px;
+  margin-right: 30px;
+}
+.flex-spec:nth-child(4n) {
+  margin: 0px;
+}
+.flex-spec:nth-last-child(-n + 4) {
+  margin-bottom: 0px;
+}
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /* Team */
-.section {
-  text-align: center;
+.sections {
   background: #f5f4fa;
 }
+/* .face {
+  margin-bottom: 30px;
+} */
 
 .profession {
   color: var(--secondary-color);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.18;
+  text-align: center;
 }
 .specialist {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  text-align: center;
 }
 
 /* Portfolio */
+.section-filter {
+  padding-bottom: 0;
+}
+.sectin-img {
+  padding-top: 34px;
+}
+.main-filter {
+  display: flex;
+  justify-content: center;
+}
+.filters {
+  display: flex;
+}
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 50px;
+}
+.filter:nth-child(5n) {
+  margin: 0px;
+}
+.flex-filter:nth-last-child(-n + 1) {
+  margin-right: 0px;
+}
+
+/* flex product */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-product {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-product {
+  width: 370px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.main-product:nth-child(3n) {
+  margin: 0px;
+}
+.main-product:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+
+.main-project {
+  display: flex;
+  flex-wrap: wrap;
+}
+.img-product {
+  margin-bottom: 20px;
+}
 .product {
+  margin-bottom: 4px;
   color: var(--primary-text-color);
 
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  text-align: center;
 }
 .project {
   color: var(--secondary-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
+  text-align: center;
 }
+
 /* Footer */
 .mailo-tel {
   color: rgba(255, 255, 255, 0.6);
@@ -203,7 +387,25 @@ a {
 }
 .basement {
   background: var(--br-fone);
+  padding-bottom: 60px;
+  padding-top: 60px;
 }
+.main-footer {
+  display: flexbox;
+}
+.adress-list {
+  display: flexbox;
+  margin-top: 20px;
+}
+/* .adress-list */
+.adress-list .tel-mail {
+  display: flexbox;
+  margin-bottom: 9px;
+}
+.tel-mail:nth-last-child(-n + 1) {
+  margin-bottom: 0px;
+}
+
 /* Акцент #2196F3;
  */
 /* Текст параграф #757575; 
