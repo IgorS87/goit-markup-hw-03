@@ -205,12 +205,6 @@ a {
   padding: 10px 32px;
 }
 
-/* flex container */
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 /* flex feuters */
 
 .flex-item {
@@ -222,7 +216,6 @@ a {
 }
 .feutures-list {
   display: flex;
-  flex-wrap: wrap;
 }
 
 /* features */
@@ -263,8 +256,6 @@ a {
 }
 .title-list {
   display: flex;
-
-  /* flex-wrap: wrap; */
 }
 /* Title */
 .section-title {
@@ -278,6 +269,7 @@ a {
 .flex-spec {
   width: 270px;
   margin-right: 30px;
+  background-color: var(--primary-white-color);
 }
 .flex-spec:nth-child(4n) {
   margin: 0px;
@@ -287,16 +279,17 @@ a {
 }
 .team-list {
   display: flex;
-  flex-wrap: wrap;
 }
 
 /* Team */
+.face {
+  display: block;
+  max-width: 100%;
+}
 .sections {
   background: #f5f4fa;
 }
-/* .face {
-  margin-bottom: 30px;
-} */
+
 .prof {
   padding: 30px 0;
 }
@@ -317,13 +310,10 @@ a {
 
 /* Portfolio */
 
-.main-filter {
+.filters {
   display: flex;
   justify-content: center;
   margin-bottom: 56px;
-}
-.filters {
-  display: flex;
 }
 .filter {
   display: flex;
@@ -338,11 +328,6 @@ a {
 }
 
 /* flex product */
-
-.main-product {
-  display: flex;
-  flex-wrap: wrap;
-}
 
 .main-product {
   width: 370px;
@@ -360,11 +345,12 @@ a {
 .main-project {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .tehno {
   padding: 20px 24px;
-  border: 1px solid black;
+  border: 1px solid #eeeeee;
   border-top: 0;
   width: 370px;
 }
